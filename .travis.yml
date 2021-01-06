@@ -7,4 +7,4 @@ before_install:
   - docker build -t parimalkesan/Docker_react -f Dockerfile.dev .
 
 script:
-  - docker run parimalkesan/Docker_react npm run test -- --coverage 
+  - docker run -e CI=true parimalkesan/Docker_react npm run test
